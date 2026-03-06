@@ -6,7 +6,8 @@ print("Enter 2 for Paper")
 print("Enter 3 for Scissor")
 print("Enter 0 for Exit\n")
 
-while True:    
+score = 0
+while True:
 
     a = int(input("Enter your choice : "))
 
@@ -28,10 +29,12 @@ while True:
                 print("Computer Won")
             else :
                 print("You Won")
+                score += 1
 
         elif a == 2:
             if com_choice == lis[0]:
                 print("You Won")
+                score += 1
             elif com_choice == lis[1]:
                 print("Tie")
             else :
@@ -42,13 +45,14 @@ while True:
                 print("Computer Won")
             elif com_choice == lis[1]:
                 print("You Won")
+                score += 1
             else :
                 print("Tie")
 
     elif a == 0:
-        print("Exiting.....")
         print("EXIT")
+        print("Your final score is : ",score)
         break
 
     else :
-        print("Enter cottect choice")
+        print("Enter correct choice")
